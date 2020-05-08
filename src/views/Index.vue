@@ -11,19 +11,19 @@
       </div>
       <div class="divtd">
         <td>
-          <span>学生姓名</span>
+          <tr>学生姓名</tr>
             <tr v-for="(item, index) in studentlist" :key="index">
               {{item.stu_name}}
             </tr>
         </td>
         <td>
-          <span>期末成绩</span>
+          <tr>期末成绩</tr>
             <tr v-for="(item, index) in studentlist" :key="index">
               {{item.stu_score}}
             </tr>
         </td>
         <td>
-          <span>操作</span>
+          <tr>操作</tr>
             <tr  v-for="(item, index) in studentlist" :key="index" :index="index">
               <button type="button" @click="delstudet(index)">删除</button>
             </tr>
@@ -41,7 +41,7 @@
           <input type="text" v-model="student_score">
         </td>
       </tr>
-      <button type="button" @click="addstudent()">添加</button>
+      <button type="button" @click="addstudent()" style="margin-left:180px">添加</button>
   </div>
 </template>
 
@@ -106,5 +106,16 @@ export default {
   width: 310px;
   border: 1px solid #9e9e9e;
   color: #009688;
+}
+td {
+  padding: 20px 0 20px 30px;
+}
+#student_score {
+  margin-top: 20px;
+}
+button {
+  margin-left:0;
+  width: 50px;
+  height: 21px;
 }
 </style>
