@@ -1,9 +1,8 @@
 <template>
   <div>
       <div class="index">学生管理系统
-          <span id="user" @click="userinfo()">{{user}}
+          <span id="user" @click="userinfo()">{{user}}</span>
           <span id="logout" @click="logout()">退出</span>
-          </span>
           <!-- <router-view /> -->
           <!-- <li>
             <router-link :to="{name: 'user'}">个人中心</router-link>
